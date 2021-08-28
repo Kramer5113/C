@@ -3,19 +3,19 @@
 #include <string.h>
 #include <Math.h>
 
-// strcpy 字符串复制函数、
-// char *strcpy( char *strDestination, const char *strSource );
-// // 使用规则前一位放置目的地 后一位放置要引用的
-// int main()
-// {
-// 	char str1[] = "Sample string";
-// 	char str2[40];
-// 	char str3[40];
-// 	strcpy(str2, str1);
-// 	strcpy(str3, "copy successful");
-// 	printf("str1: %s\nstr2: %s\nstr3: %s\n", str1, str2, str3);
-// 	return 0;
-// }
+//strcpy 字符串复制函数、
+char *strcpy( char *strDestination, const char *strSource );
+// 使用规则前一位放置目的地 后一位放置要引用的
+int main()
+{
+	char str1[] = "Sample string";
+	char str2[40];
+	char str3[40];
+	strcpy(str2, str1);
+	strcpy(str3, "copy successful");
+	printf("str1: %s\nstr2: %s\nstr3: %s\n", str1, str2, str3);
+	return 0;
+}
 
 // memset的使用
 // void *memset( void *dest, int c, size_t count );
@@ -94,9 +94,18 @@
 // }
 
 // 函数的嵌套
-int main()
-{
-	printf("%d", printf("%d", printf("%d", 43)));
-	return 0;	
-}
+// int main()
+// {
+// 	printf("%d", printf("%d", printf("%d", 43)));
+// 	return 0;	
+// }
 //从最内层开始打印43 当外一层接收到两个字符后 打印出2 最外一层收到一个字符 打印1
+
+// 栈溢出
+//int main()
+//{
+//	printf("hehe\n");
+//	main();
+//	return 0;
+//}
+//  此程序会栈溢出 stack overflow 因为主函数不断在被调用 当栈区存满时程序爆炸
